@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/images/netflix-image.jpg);
+    background-size: cover cover ;
+    background-position: center center;
+    background-repeat: no-repeat;       
+}
+header{
+    color: red;
+    background-color: rgba(0, 0, 0, .85);
+    height: min-content;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginUpForm{
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    width: min-content;
+    padding: 25px;
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.input{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(86, 77, 77, .5);
+    margin: 5px;
+    color: rgb(124, 66, 66);
+
+}
+
+.input::after{
+    border:none
+
+}
+.submitBut{
+    margin-top: 10px;
+    border: none;
+    background-color: rgba(65, 56, 56, 0.5);
+    color: red;
+    border-radius: 5px;
+    
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.input:focus::placeholder{
+ color: transparent;
+}
+
+.input::placeholder{
+    transition: color 0.3s ease;
+    font-size: small;
+    text-align: center;
+}
+
+#userNameErrors{
+    color: red;
+    font-size:small;
+}
+
+#passwordErrors{
+    color: red;
+    font-size:small;
+}
+
+
+
+
+
+
+
+
+
+
