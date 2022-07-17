@@ -40,7 +40,7 @@ function formValidate() {
 
     
 
-    
+    window.location.replace("home.html") 
 }
 
 function redirect(){

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/watchlistStyles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="/scripts/watchlistScripts.js" ></script>
+    <title>Netflix WatchList</title>
+</head>
+<body>
+    <div id="watchListApp">
+
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark " id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="images/netflix-logo.png" alt="" class="navLogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html">Logout</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="text-white mx-3">{{userName}}</div>
+                    <img src="images/netflix-avatar.png" alt="" class="navAvatar">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchMovie">
+        <input type="text" name="search" class="searchInput">
+        <button type="submit" class="bannerButton">Search</button>
+        <div class="searchFadeBottom"></div>   
+    </div>
+
+    <div class="watchList">
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">{{movies.name}}</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie4.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Who Killed Sara</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie5.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Cobra Ka</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie6.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Elite</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie7.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Transformers</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie8.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Umbrella Academy</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie6.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Elite</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Haunted</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Haunted</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Haunted</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Haunted</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+        <div class="card movie ">
+            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card-body ">
+                <h5 class="card-title cardTitle">Haunted</h5>
+                <div class="cardBut">
+                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
+                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
