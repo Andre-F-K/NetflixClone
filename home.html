@@ -61,7 +61,7 @@
         <div class="bannerContents">
             <h1 class="bannerTitle">Money Heist</h1>
             <div class="bannerButtons">
-                <button class="bannerButton">Play</button>
+                <button class="bannerButton"  >Play</button>
                 <button class="bannerButton">My List</button>
             </div>
             <div class="bannerDescription">
@@ -78,130 +78,21 @@
 
     <!-- //netflix origoinals// -->
     <div class="row">
-        <h2 id="netflixOriginals">Netflix originals {{moviesArray}}</h2>
+        <h2 id="netflixOriginals">Netflix originals </h2>
 
 
         <div class="rowPosters">
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
+            <div class="card movie " v-for="movie in movies">
+                <img :src="movie.thumbnail" class="card-img-top" alt="">
                 <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
+                    <h5 class="card-title cardTitle">{{movie.movieName}}</h5>
                     <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+                        <a :href="movie.preview" class="btn cardBtn btn-primary mb-1">Play</a>
+                        <a href="#" class="btn cardBtn btn-primary" @click="addWatchList">+ WatchList</a>
                     </div>
                 </div>
             </div>
-            <div class="card movie ">
-                <img src="images/large-movie4.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Who Killed Sara</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie5.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Cobra Ka</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie6.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Elite</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie7.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Transformers</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie8.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Umbrella Academy</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie6.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Elite</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card movie ">
-                <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-                <div class="card-body ">
-                    <h5 class="card-title cardTitle">Haunted</h5>
-                    <div class="cardBut">
-                        <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                        <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
-                    </div>
-                </div>
-            </div>
+
 
 
         </div>
@@ -249,7 +140,7 @@
             <img src="images/small-movie4.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie5.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie6.jpg" alt="" class="rowPoster ">
-            <img src="images/small-movie7.jpg" alt="" class="rowPoster ">
+            <img src="images/small-movie4.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie8.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie1.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie2.jpg" alt="" class="rowPoster ">
@@ -281,7 +172,7 @@
             <img src="images/small-movie4.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie5.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie6.jpg" alt="" class="rowPoster ">
-            <img src="images/small-movie7.jpg" alt="" class="rowPoster ">
+            <img src="images/small-movie6.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie8.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie1.jpg" alt="" class="rowPoster ">
             <img src="images/small-movie2.jpg" alt="" class="rowPoster ">

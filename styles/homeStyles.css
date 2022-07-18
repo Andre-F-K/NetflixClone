@@ -32,8 +32,12 @@ body{
 
 .rowPosters::-webkit-scrollbar{
     /* display: none; */
-    color: transparent;
+    background-color: #111;
 }
+
+.rowPosters::-webkit-scrollbar-thumb {
+    background:  rgba(51, 51, 51, 0.5)
+  }
 
 .rowPosterLarge{
     max-height: 250px;
