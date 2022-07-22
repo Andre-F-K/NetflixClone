@@ -66,22 +66,29 @@ window.addEventListener('load', () => {
                        movieSelec = element
                     }       
                 });
-
                 console.log(movieSelec)
+                let watchListArr = []
+
+                // watchListArr.push(movieSelec)
+
+                
+
+                console.log(watchListArr)
                 console.log(localStorage.getItem('watchMovie'))
                 if (!localStorage.getItem('watchMovie') ) {
-                    let watchListArr = []
-                    watchListArr.push(movieSelec)
-                    localStorage.setItem('watchMovie',watchListArr)
+
+                    
+                    localStorage.setItem('watchMovie',JSON.stringify(watchListArr))
                 }else{
                    let localStorageArr = localStorage.getItem('watchMovie')
-                   localStorageArr.push(movieSelec)
-                   
-                   localStorage.setItem('watchMovie', localStorageArr)
+
+                   localStorage.setItem('watchMovie', JSON.stringify(watchListArr))
                        
                 }
                 
-            }
+            },
+
+            
         },
 
         computed: {
