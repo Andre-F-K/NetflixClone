@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
             return {
                 userName: UserObj.name,
                 movies: [
-                    {movieName: 'Luis Miguel',thumbnail: 'images/large-movie1.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'sas',thumbnail: 'images/large-movie1.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Lucifer',thumbnail: 'images/large-movie2.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Haunted',thumbnail: 'images/large-movie3.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: "Who Killed Sam",thumbnail: 'images/large-movie4.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
@@ -37,18 +37,18 @@ window.addEventListener('load', () => {
                     {movieName: 'Elite ',thumbnail: 'images/large-movie6.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Transformers',thumbnail: 'images/large-movie7.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Umbrella Academy',thumbnail: 'images/large-movie8.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Luis Miguel',thumbnail: 'images/large-movie1.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Lucifer',thumbnail: 'images/large-movie2.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Haunted',thumbnail: 'images/large-movie3.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Who Killed Sam',thumbnail: 'images/large-movie4.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Raging Bull',thumbnail: 'images/large-movie5.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'rer',thumbnail: 'images/large-movie1.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'ddd',thumbnail: 'images/large-movie2.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'ssss',thumbnail: 'images/large-movie3.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'uyu',thumbnail: 'images/large-movie4.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'pop',thumbnail: 'images/large-movie5.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Elite',thumbnail: 'images/large-movie6.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Transformers',thumbnail: 'images/large-movie7.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Umbrella Academy ',thumbnail: 'images/large-movie8.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Luis Miguel',thumbnail: 'images/large-movie1.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
                     {movieName: 'Lucifer',thumbnail: 'images/large-movie2.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Haunted',thumbnail: 'images/large-movie3.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
-                    {movieName: 'Who Killed Sam',thumbnail: 'images/large-movie4.jpg',preview: 'https://www.youtube.com/watch?v=5PSNL1qE6VY',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'aasd',thumbnail: 'images/large-movie3.jpg',preview: 'https://www.youtube.com/watch?v=iik25wqIuFo',ComingSoon: true, Genre: "Action, Crime, Drama"},
+                    {movieName: 'ioio',thumbnail: 'images/large-movie4.jpg',preview: 'https://www.youtube.com/watch?v=5PSNL1qE6VY',ComingSoon: true, Genre: "Action, Crime, Drama"},
                             ]
 
 
@@ -57,9 +57,30 @@ window.addEventListener('load', () => {
 
 
         methods: {
-            addWatchList(){
-                let watchListArr = []
-                console.log(this.movies.indexOf('Lucifer'))
+            addWatchList(name){
+                
+                console.log(name)
+                let movieSelec = null
+                this.movies.forEach(element => {
+                    if (element.movieName == name) {
+                       movieSelec = element
+                    }       
+                });
+
+                console.log(movieSelec)
+                console.log(localStorage.getItem('watchMovie'))
+                if (!localStorage.getItem('watchMovie') ) {
+                    let watchListArr = []
+                    watchListArr.push(movieSelec)
+                    localStorage.setItem('watchMovie',watchListArr)
+                }else{
+                   let localStorageArr = localStorage.getItem('watchMovie')
+                   localStorageArr.push(movieSelec)
+                   
+                   localStorage.setItem('watchMovie', localStorageArr)
+                       
+                }
+                
             }
         },
 

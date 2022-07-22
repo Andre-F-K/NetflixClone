@@ -2,7 +2,8 @@ window.addEventListener('load', () => {
 
     let getJson = localStorage.getItem('userName')
     let UserObj = JSON.parse(getJson)
-    // console.log(UserObj)
+    let watchListDisplay = localStorage.getItem('watchMovie')
+    console.log(watchListDisplay)
     // console.log(typeof (UserObj))
     // console.log(UserObj)
 
@@ -14,13 +15,13 @@ window.addEventListener('load', () => {
         data() {
             return {
                 userName: UserObj.name,
-                movies: []
+                movies: [watchListDisplay]
             }
         },
 
 
         methods: {
-
+            
         }
     })
 

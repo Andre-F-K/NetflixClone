@@ -48,16 +48,16 @@
     <h1 class="watchlistHeader">Your WatchList</h1>
     <div class="watchList">
         
-        <div class="card movie ">
-            <img src="images/large-movie3.jpg" class="card-img-top" alt="movieImage">
-            <div class="card-body ">
-                <h5 class="card-title cardTitle">qwe</h5>
-                <div class="cardBut">
-                    <a href="#" class="btn cardBtn btn-primary mb-1">Play</a>
-                    <a href="#" class="btn cardBtn btn-primary">+ WatchList</a>
+            <div class="card movie " v-for="movie in movies">
+                <img :src="movie.thumbnail" class="card-img-top" alt="">
+                <div class="card-body ">
+                    <h5 class="card-title cardTitle">{{movie}}</h5>
+                    <div class="cardBut">
+                        <a :href="movie.preview" class="btn cardBtn btn-primary mb-1">Play</a>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
        
 
